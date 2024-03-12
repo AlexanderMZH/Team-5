@@ -1,0 +1,137 @@
+// .single-item-section {
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+// }
+
+@keyframes shrink {
+  from {
+    height: 375px;
+  }
+  to {
+    height: 355px;
+  }
+}
+
+@keyframes quick-view {
+  from {
+    bottom: 40px;
+  }
+  to {
+    bottom: 55px;
+  }
+}
+
+.single-item-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .single-item-container-ul {
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .single-item-container-li {
+      &:hover {
+        .view {
+          display: block !important;
+          animation: quick-view 0.3s forwards;
+        }
+        .single-item-image {
+          img {
+            animation: shrink 0.7s forwards;
+            // animation-name: shrink;
+            // animation-duration: 0.3s;
+            // animation-fill-mode: forwards;
+          }
+        }
+      }
+      max-width: calc(280px);
+      list-style-type: none;
+
+      .single-item {
+        position: relative;
+
+        .single-item-image {
+          width: 100%;
+          img {
+            width: 280px;
+            height: 375px;
+            border-radius: 20px;
+          }
+        }
+        .single-item-features {
+          width: 100%;
+          z-index: 1s;
+
+          .features-text {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40%;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 5px;
+            border-radius: 20px;
+            background-color: #fff;
+          }
+
+          .features-icons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+              width: 40px;
+              background: rgba(0, 0, 0, 0.3);
+              border-radius: 50%;
+              padding: 10px;
+              margin-bottom: 5px;
+              cursor: pointer;
+            }
+          }
+        }
+        .view {
+          display: none;
+          position: absolute;
+          bottom: 55px;
+          left: 70px;
+          width: 50%;
+          text-align: center;
+          padding: 10px;
+          border-radius: 20px;
+          border: 3px solid #fff;
+          background-color: black;
+          cursor: pointer;
+
+          span {
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+
+        .single-item-name {
+          display: flex;
+          justify-content: space-between;
+          text-transform: capitalize;
+          margin-top: 20px;
+          line-height: 25px;
+          h3 {
+            &:not(:last-child) {
+              width: 70%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
