@@ -1,8 +1,46 @@
-// .single-item-section {
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-// }
+.popular-product-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .popular-product-nav {
+    margin: 20px 0;
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // flex-direction: column;
+
+    .product-nav {
+      padding: 5px;
+      border: 1px solid black;
+      border-radius: 20px;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li {
+          padding: 5px 20px;
+          border-radius: 20px;
+          text-transform: capitalize;
+          list-style-type: none;
+          cursor: pointer;
+
+          &:not(:last-child) {
+            margin-right: 5px;
+          }
+
+          &:first-child {
+            text-transform: uppercase;
+          }
+        }
+        .active {
+          color: #fff;
+          background-color: black;
+        }
+      }
+    }
+  }
+}
 
 @keyframes shrink {
   from {
@@ -22,24 +60,24 @@
   }
 }
 
-.single-item-container {
+.popular-product-container {
   width: 100%;
   display: flex;
   justify-content: center;
 
-  .single-item-container-ul {
+  .popular-product-container-ul {
     width: 95%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 
-    .single-item-container-li {
+    .popular-product-container-li {
       &:hover {
         .view {
           display: block !important;
           animation: quick-view 0.3s forwards;
         }
-        .single-item-image {
+        .popular-product-image {
           img {
             animation: shrink 0.7s forwards;
             // animation-name: shrink;
@@ -51,10 +89,10 @@
       max-width: calc(280px);
       list-style-type: none;
 
-      .single-item {
+      .popular-product {
         position: relative;
 
-        .single-item-image {
+        .popular-product-image {
           width: 100%;
           img {
             width: 280px;
@@ -62,7 +100,7 @@
             border-radius: 20px;
           }
         }
-        .single-item-features {
+        .popular-product-features {
           width: 100%;
           z-index: 1s;
 
@@ -119,7 +157,7 @@
           }
         }
 
-        .single-item-name {
+        .popular-product-name {
           display: flex;
           justify-content: space-between;
           text-transform: capitalize;
@@ -132,6 +170,16 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .popular-product-section {
+    .popular-product-nav {
+      width: 90%;
+      flex-direction: column;
+      align-items: unset;
     }
   }
 }
