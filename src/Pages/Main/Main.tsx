@@ -1,13 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import Spinner from "../../Components/Spinner";
-import CategoryAnim from "../../Components/CategoryAnim";
-import CardSlick from "../../Components/card-slick";
+import Header from "../../Components/Header";
 
 const Main = () => {
   const navigate = useNavigate();
 
   return (
     <>
+      <div>
+        <Header />
+      </div>
       <h1 style={{ textAlign: "center" }}>this is main page</h1>
       <h1
         onClick={() => {
@@ -26,10 +28,6 @@ const Main = () => {
 
       <div>
         <Spinner />
-      </div>
-      <div className="container">
-        <CategoryAnim/>
-        {/* <CardSlick/> */}
       </div>
     </>
   );
