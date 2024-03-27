@@ -39,7 +39,6 @@
 
 .header-navigation-right {
   width: 35%;
-  background-color: red;
 }
 
 .navigation-right-ul {
@@ -48,8 +47,11 @@
   .navigation-right-li {
     list-style-type: none;
 
+    .single-navigator-right {
+    }
+
     img {
-      width: 30px;
+      width: 25px;
     }
   }
 }

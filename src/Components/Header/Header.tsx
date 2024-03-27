@@ -69,17 +69,19 @@ const Header = () => {
             </li>
             <li className="navigation-right-li">
               <div className="single-navigator-right">
-                <img src="/heart.png" alt="wishlist" />
+                <img src="/header_heart.png" alt="wishlist" />
               </div>
             </li>
             <li className="navigation-right-li">
               <div className="single-navigator-right">
-                <img src="/cart.png" alt="cart" />
+                <img src="/header_cart.png" alt="cart" />
               </div>
             </li>
             <li className="navigation-right-li">
               <div className="single-navigator-right">
-                <img src="" alt="burger-menu" />
+                <div></div>
+                <div></div>
+                <div></div>
               </div>
             </li>
           </ul>
